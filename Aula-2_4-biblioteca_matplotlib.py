@@ -16,6 +16,7 @@ plt.title('Vendas Mensais')
 
 #Salvar o gráfico como imagem (No caso queira salvar)
 plt.savefig('grafico_vendas.png')  # Salva o gráfico como imagem
+print("\nGráfico salvo como 'grafico_vendas.png na pasta atual.\n")
 
 #Exibir o gráfico (Não funcionou no VsCode no Ubuntu)
 #plt.show()

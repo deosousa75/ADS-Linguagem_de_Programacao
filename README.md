@@ -15,6 +15,9 @@
  #### Aula 4
  - Módulos e Biblioteca - Atividade com matplotlib
 
+ #### Aula 5
+ - Exemplo de programa de catalogação de livros em uma biblioteca
+
 
 
 
@@ -25,5 +28,6 @@
 
 Exemplo:
     print('\033[1;31mTexto em Negrito e Vermelho\033[m')
+    print('\033[1;31mTexto em Negrito e Vermelho\033[0m') 'Incluir o 0 no final no Colab
 
 
