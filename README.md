@@ -22,6 +22,14 @@
  - Trabalho de encerramento da unidade
 
 
+ ### Unidade 3
+ #### Aula 1
+ - SQL com sqlite3
+
+  #### Aula 2
+ - Biblioteca Pandas
+
+
 
 ##### Bisu Formatação de cores:
 - Estilo: 0 (normal), 1 (negrito), 4 (sublinhado). 
@@ -32,4 +40,9 @@ Exemplo:
     print('\033[1;31mTexto em Negrito e Vermelho\033[m')
     print('\033[1;31mTexto em Negrito e Vermelho\033[0m') 'Incluir o 0 no final no Colab
 
+
+# Bibliotecas utilizadas
+- pandas
+- sqlite3
+- matplotlip
 
