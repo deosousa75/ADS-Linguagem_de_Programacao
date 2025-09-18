@@ -29,6 +29,12 @@
   #### Aula 2
  - Biblioteca Pandas
 
+   #### Aula 3
+ - Biblioteca Pandas parte II
+
+   #### Aula 4
+ - Bibliotecas Matplotlib, Pandas, Seaborn
+
 
 
 ##### Bisu Formatação de cores:
@@ -45,4 +51,4 @@ Exemplo:
 - pandas
 - sqlite3
 - matplotlip
-
+- seaborn
