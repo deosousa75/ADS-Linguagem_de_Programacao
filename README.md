@@ -19,7 +19,7 @@
  - Exemplo de programa de catalogação de livros em uma biblioteca
 
  #### Atividade
- - Trabalho de encerramento da unidade
+ - Trabalho de encerramento da unidade 2
 
 
  ### Unidade 3
@@ -34,6 +34,13 @@
 
    #### Aula 4
  - Bibliotecas Matplotlib, Pandas, Seaborn
+
+   #### Aula 
+ - Revisão SQlite
+
+ #### Atividade
+ - Trabalho de encerramento da unidade 3
+
 
 
 
