@@ -56,9 +56,50 @@ else:
 # Passo 2 - Explorar e preparar os dados
 df_vendas = pd.read_sql_query('SELECT * FROM vendas1', conexao)
 #df_vendas.head()
-vendas = pd.DataFrame(df_vendas)
+vendas_lista = df_vendas.to_dict('records') # Convertendo DataFrame para lista de dicionários
 
-print(vendas)
+# Passo 3 - Analisar os dados
+def gerar_grafico_quantidade_vendas_categoria():
+  # Criar um gráfico de vendas por categoria
+  categoria = [venda['categoria'] for venda in vendas_lista] # Lista de categorias dos produtos
+  categorias_unicas = list(set(categoria)) # Remove duplicatas das categorias
+  categorias_unicas.sort() # Ordena as categorias alfabeticamente
+
+  # Contagem de vendas por categoria
+  contagem_por_categoria = [categoria.count(cat) for cat in categorias_unicas] # Conta quantas vendas há em cada categoria
+
+  # Criar um gráfico de linha
+  plt.bar(categorias_unicas, contagem_por_categoria, color='darkblue') #
+  plt.xlabel('Categoria do Produto') # Rótulo do eixo x
+  plt.ylabel('Quantidade de Vendas') # Rótulo do eixo y
+  plt.title('Distribuição de Vendas por Categoria de Produto') # Título do gráfico
+
+  # Adicionar rótulos aos pontos de dados
+  for i, valor in enumerate(contagem_por_categoria): # Adiciona rótulos aos pontos de dados
+    plt.text(categorias_unicas[i], valor, str(valor), ha='center', va='bottom') # Posiciona os rótulos
+  plt.grid(True) # Adiciona uma grade ao gráfico
+  plt.xticks(rotation=45) # Rotaciona os rótulos do eixo x para melhorar a legibilidade
+
+  #Exibir o gráfico
+  plt.tight_layout() # Ajusta o layout do gráfico
+  plt.show() # Exibe o gráfico
+
+  # Salvar o gráfico como imagem
+  plt.savefig('vendas_por_categoria.png')  # Salva o gráfico como imagem
+  print("\nGráfico salvo como 'vendas_por_categoria.png' na pasta atual.\n") # Confirmação de salvamento do gráfico
+
+gerar_grafico_quantidade_vendas_categoria()
+
+# Passo 4 - Visualizar os dados
+sns.set(style='whitegrid') # opções: darkgrid, whitegrid, dark, white, ticks
+
+fig, ax = plt.subplots(1, 2, figsize=(15, 5))
+
+sns.barplot(data=df_vendas, x='categoria', y='valor_venda', ax=ax[0])
+sns.barplot(data=df_vendas, x='valor_venda', y='produto', ax=ax[1], estimator=sum)
+#plt.savefig('grafico_seaborn.png')
+#print("\nGráfico salvo como 'grafico_seaborn.png' na pasta atual.\n")
+#print('\nFIM DO GRÁFICO SEABORN\n')
 
 
 # Fechando a conexão com o banco de dados
