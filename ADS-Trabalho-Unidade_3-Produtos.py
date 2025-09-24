@@ -68,7 +68,7 @@ def gerar_grafico_quantidade_vendas_categoria():
   # Contagem de vendas por categoria
   contagem_por_categoria = [categoria.count(cat) for cat in categorias_unicas] # Conta quantas vendas há em cada categoria
 
-  # Criar um gráfico de linha
+  # Criar um gráfico de linha de vendas por categoria
   plt.bar(categorias_unicas, contagem_por_categoria, color='darkblue') #
   plt.xlabel('Categoria do Produto') # Rótulo do eixo x
   plt.ylabel('Quantidade de Vendas') # Rótulo do eixo y
@@ -104,5 +104,3 @@ sns.barplot(data=df_vendas, x='valor_venda', y='produto', ax=ax[1], estimator=su
 
 # Fechando a conexão com o banco de dados
 conexao.close()
-
-
