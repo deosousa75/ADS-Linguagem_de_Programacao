@@ -41,6 +41,24 @@
  #### Atividade
  - Trabalho de encerramento da unidade 3
 
+ ### Unidade 4
+ #### Aula 1
+ - HTML
+
+  #### Aula 2
+ - Programação Mobile com Kivy
+
+   #### Aula 3
+ - Testes com Python - Assert
+
+   #### Aula 4
+ - Machine Learning
+
+   #### Aula 
+ - Revisão
+
+ #### Atividade
+ - Trabalho de encerramento da unidade 4
 
 
 
