@@ -59,3 +59,6 @@ Exemplo:
 - sqlite3
 - matplotlip
 - seaborn
+- tensorflow
+- scifi-learn
+- IPython
